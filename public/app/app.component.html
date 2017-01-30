@@ -1,0 +1,14 @@
+<h1>Kevin's Classifieds</h1>
+<button ng-click="$ctrl.createClass()">Create Post</button>
+<ul ng-repeat="classified in $ctrl.classifieds">
+  <li>
+    <p>{{ classified.title }}</p>
+    <p>{{ classified.description }}</p>
+    <p>{{ classified.price }}</p>
+    <img class="media-object" src="{{classified.item_image}}">
+    <br>
+    <a ui-sref="classEdit" ng-click="$ctrl.editClass(classified)">Edit</a>
+    <br>
+    <a href="*" ng-click="$ctrl.deleteClass(classified)">Delete</a>
+
+  </li>

@@ -1,0 +1,21 @@
+<form novalidate name="$ctrl.newClassified" ng-submit="$ctrl.classAdd($ctrl.classified)">
+  <div>
+    <label for="title">Title</label>
+    <input id="title" class="form-control" ng-model="$ctrl.classified.title" required>
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <input id="description" class="form-control" ng-model="$ctrl.classified.description" required>
+  </div>
+  <div>
+    <label for="price">Price</label>
+    <input id="price" class="form-control" ng-model="$ctrl.classified.price" required>
+  </div>
+  <div>
+    <label for="item_image">Item Image URL</label>
+    <input id="item_image" class="form-control" ng-model="$ctrl.classified.item_image" required>
+  </div>
+  <button type="submit" ng-disabled="$ctrl.newClassified.$invalid">
+    Create Post
+  </button>
+</form>
